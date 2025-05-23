@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+
+  <!-- Tailwind CSS + DaisyUI via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primaryGradientStart: '#4f46e5',
+            primaryGradientEnd: '#3b82f6',
+          },
+          animation: {
+            fadeIn: 'fadeIn 1.5s ease forwards',
+            bounceSlow: 'bounce 2.5s infinite',
+            scaleUp: 'scaleUp 0.3s ease forwards',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            },
+            scaleUp: {
+              '0%': { transform: 'scale(1)' },
+              '100%': { transform: 'scale(1.1)' },
+            }
+          },
+        },
+      },
+      plugins: [tailwindcss.plugin(function({ addComponents }) {
+        // DaisyUI plugin simulation (for CDN version - limited styles)
+      })],
+    }
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+    }
+    /* Override DaisyUI btn-primary for gradient */
+    .btn-primary {
+      background-image: linear-gradient(to right, #4f46e5, #3b82f6);
+      border: none;
+      transition: background-position 0.4s ease;
+      background-size: 200% 100%;
+      background-position: left;
+    }
+    .btn-primary:hover {
+      background-position: right;
+      box-shadow: 0 10px 15px rgba(59, 130, 246, 0.5);
+    }
+    .btn-success {
+      background-image: linear-gradient(to right, #16a34a, #22c55e);
+      border: none;
+      transition: background-position 0.4s ease;
+      background-size: 200% 100%;
+      background-position: left;
+    }
+    .btn-success:hover {
+      background-position: right;
+      box-shadow: 0 10px 15px rgba(34, 197, 94, 0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-8 text-white font-sans">
+
+  <div class="max-w-xl w-full bg-white/10 backdrop-blur-md shadow-xl rounded-lg p-8 space-y-6 animate-fadeIn">
+    <div class="text-center">
+      <img src="Profile.jpg" alt="Your Photo" class="w-32 h-32 rounded-full mx-auto mb-4 animate-bounceSlow shadow-lg border-4 border-white/30" />
+      <h1 class="text-3xl font-extrabold drop-shadow-lg">Mangal Dwivedi</h1>
+      <p class="text-white/80 mt-1">Email: <a href="mailto:dwivedimangalpubg@gmail.com" class="underline hover:text-indigo-300">dwivedimangalpubg@gmail.com</a></p>
+      <p class="text-white/80">Phone: <a href="tel:+919960226236" class="underline hover:text-indigo-300">+91-9960226236</a></p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+      <a href="https://mangal029.github.io/Mangal13/" target="_blank" class="btn btn-primary transform transition-transform duration-300 hover:scale-110">Day 1</a>
+      <a href="https://mangal029.github.io/Portfolio/" target="_blank" class="btn btn-primary transform transition-transform duration-300 hover:scale-110">Day 2</a>
+      <a href="https://mangal029.github.io/Portfolio/" target="_blank" class="btn btn-primary transform transition-transform duration-300 hover:scale-110">Day 3</a>
+      <a href="https://mangal029.github.io/Man029/" target="_blank" class="btn btn-primary transform transition-transform duration-300 hover:scale-110">Day 4</a>
+      <a href="/day5" class="btn btn-success transform transition-transform duration-300 hover:scale-110">Day 5</a>
+    </div>
+
+    <div class="text-center text-sm mt-6 text-white/70 drop-shadow">
+      Hosted at: <a href="https://mangal029.github.io/Man029/" target="_blank" class="link link-primary hover:text-indigo-300">yourwebsite.Github.app</a>
+    </div>
+  </div>
+
+</body>
+</html>
