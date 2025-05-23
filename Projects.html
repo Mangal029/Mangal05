@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Project Videos</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      text-align: center;
+    }
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    video {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      .video-container {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+   <!-- Projects Section -->
+<section id="projects" class="py-16 bg-blue-50 dark:bg-gray-800">
+  <div class="container mx-auto px-4 max-w-3xl text-center fade-in-up">
+    <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-300 mb-6">🚀 Projects & Achievements</h2>
+    <ul class="text-lg list-disc list-inside text-left space-y-3">
+      <li>Built a mini Land Rover robot using ESP32 and motor driver BTS7690</li>
+      <li>Developed a Smart Home Automation System with voice control</li>
+    </ul>
+  </div>
+</section>
+
+
+
+  <h1>My Project Demos</h1>
+
+  <div class="video-container">
+    <div>
+      <h3>Demo 1</h3>
+      <video controls>
+      <img src="Land Rover.jpg" alt="Land Rover" class="mx-auto w-36 h-36 rounded-full border-4 border-blue-500 shadow-lg mb-6">
+        <source src="Profilevideo1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div>
+      <h3>Demo 2</h3>
+      <video controls>
+        <source src="Profilevideo2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+
+</body>
+</html>
